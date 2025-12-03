@@ -61,12 +61,30 @@ public class CadastroUI : MonoBehaviour
         inputNome.onValueChanged.AddListener(ValidarCampos);
         inputTelefone.onValueChanged.AddListener(ValidarCampos);
 
-        //  ADIÇÃO — começa desativado
+        // >>> ADIÇÃO — abrir "(" ao clicar
+        inputTelefone.onSelect.AddListener(delegate { AoSelecionarTelefone(); });
+        // >>> ADIÇÃO — remover "(" ao sair
+        inputTelefone.onDeselect.AddListener(delegate { AoSairDoTelefone(); });
+
+        // checkmark
         imagemCheck.gameObject.SetActive(false);
         imagemQuadrado.GetComponent<Button>().onClick.AddListener(ToggleCheck);
-        //  ---------------------
+
+        // >>> ADIÇÃO — transformar nome em maiúsculas
+        inputNome.onValueChanged.AddListener(ForcarNomeMaiusculo);
 
         ResetUI();
+    }
+
+    // Forçar nome para MAIÚSCULO
+    private void ForcarNomeMaiusculo(string texto)
+    {
+        if (inputNome.text != texto.ToUpper())
+        {
+            int pos = inputNome.caretPosition;
+            inputNome.text = texto.ToUpper();
+            inputNome.caretPosition = Mathf.Clamp(pos, 0, inputNome.text.Length);
+        }
     }
 
     //  ADIÇÃO — clique no quadrado
@@ -74,9 +92,37 @@ public class CadastroUI : MonoBehaviour
     {
         marcado = !marcado;
         imagemCheck.gameObject.SetActive(marcado);
-        ValidarCampos(""); // força atualização do botão
+        ValidarCampos("");
     }
     //  ---------------------
+
+    private void AoSelecionarTelefone()
+    {
+        if (string.IsNullOrEmpty(inputTelefone.text))
+        {
+            inputTelefone.text = "(";
+            inputTelefone.caretPosition = 1;
+        }
+    }
+
+    private void AoSairDoTelefone()
+    {
+        string numeros = ExtrairApenasNumeros(inputTelefone.text);
+
+        if (numeros.Length == 0)
+        {
+            podeFormatarTelefone = false;
+            inputTelefone.text = "";
+            ValidarCampos("");
+            StartCoroutine(ReabilitarFormatacaoTelefoneUmFrame());
+        }
+    }
+
+    private System.Collections.IEnumerator ReabilitarFormatacaoTelefoneUmFrame()
+    {
+        yield return null;
+        podeFormatarTelefone = true;
+    }
 
     private void SetupDataFolder()
     {
@@ -216,16 +262,11 @@ public class CadastroUI : MonoBehaviour
 
             SalvarNoArquivoConsolidado(jogador);
 
-            // NOVO — recarregar automaticamente o sorteio!
             SorteioLoader loader = FindObjectOfType<SorteioLoader>();
             if (loader != null)
             {
                 loader.ReloadPlayers();
                 Debug.Log(" Loader atualizado imediatamente após cadastro!");
-            }
-            else
-            {
-                Debug.LogWarning("SorteioLoader não encontrado na cena!");
             }
         }
         catch (Exception ex)
@@ -233,7 +274,6 @@ public class CadastroUI : MonoBehaviour
             Debug.LogError($"Erro ao salvar jogador: {ex.Message}");
         }
     }
-
 
     private void SalvarNoArquivoConsolidado(PlayerData jogador)
     {
@@ -285,7 +325,6 @@ public class CadastroUI : MonoBehaviour
         return new string(texto.Where(char.IsDigit).ToArray());
     }
 
-    //  ALTERAÇÃO – AGORA SÓ LIBERA O BOTÃO SE O CHECKMARK ESTIVER MARCADO
     private void ValidarCampos(string _)
     {
         string nome = inputNome.text.Trim();
@@ -296,7 +335,6 @@ public class CadastroUI : MonoBehaviour
 
         btnCadastrar.interactable = nomeValido && telefoneValido && marcado;
     }
-    // ---------------------
 
     private void MostrarNumeroSorte(int numero)
     {
@@ -391,10 +429,8 @@ public class CadastroUI : MonoBehaviour
         inputTelefone.interactable = true;
         btnCadastrar.interactable = false;
 
-        //  RESET DO CHECKMARK
         marcado = false;
         imagemCheck.gameObject.SetActive(false);
-        //  ---------------------
 
         if (inputNome.image != null)
             inputNome.image.color = Color.white;
@@ -430,8 +466,11 @@ public class CadastroUI : MonoBehaviour
         if (inputTelefone != null)
             inputTelefone.onValueChanged.RemoveListener(ValidarCampos);
 
-        //  remover listener do quadrado
         if (imagemQuadrado != null)
             imagemQuadrado.GetComponent<Button>().onClick.RemoveListener(ToggleCheck);
+
+        // remover listener das maiúsculas
+        if (inputNome != null)
+            inputNome.onValueChanged.RemoveListener(ForcarNomeMaiusculo);
     }
 }

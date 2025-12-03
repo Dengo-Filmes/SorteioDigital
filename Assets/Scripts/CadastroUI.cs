@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -44,6 +43,13 @@ public class CadastroUI : MonoBehaviour
 
     private bool podeFormatarTelefone = true;
 
+    //  ADIÇÃO DO CHECKMARK
+    [Header("Checkmark")]
+    public Image imagemQuadrado;   // objeto pai (o quadrado)
+    public Image imagemCheck;      // imagem filha (o V)
+    private bool marcado = false;
+    //  ---------------------
+
     private void Start()
     {
         SetupDataFolder();
@@ -55,8 +61,22 @@ public class CadastroUI : MonoBehaviour
         inputNome.onValueChanged.AddListener(ValidarCampos);
         inputTelefone.onValueChanged.AddListener(ValidarCampos);
 
+        //  ADIÇÃO — começa desativado
+        imagemCheck.gameObject.SetActive(false);
+        imagemQuadrado.GetComponent<Button>().onClick.AddListener(ToggleCheck);
+        //  ---------------------
+
         ResetUI();
     }
+
+    //  ADIÇÃO — clique no quadrado
+    private void ToggleCheck()
+    {
+        marcado = !marcado;
+        imagemCheck.gameObject.SetActive(marcado);
+        ValidarCampos(""); // força atualização do botão
+    }
+    //  ---------------------
 
     private void SetupDataFolder()
     {
@@ -252,6 +272,7 @@ public class CadastroUI : MonoBehaviour
         return new string(texto.Where(char.IsDigit).ToArray());
     }
 
+    //  ALTERAÇÃO – AGORA SÓ LIBERA O BOTÃO SE O CHECKMARK ESTIVER MARCADO
     private void ValidarCampos(string _)
     {
         string nome = inputNome.text.Trim();
@@ -260,8 +281,9 @@ public class CadastroUI : MonoBehaviour
         bool nomeValido = !string.IsNullOrEmpty(nome) && nome.Length >= 3;
         bool telefoneValido = telefone.Length >= 10 && telefone.Length <= 11;
 
-        btnCadastrar.interactable = nomeValido && telefoneValido;
+        btnCadastrar.interactable = nomeValido && telefoneValido && marcado;
     }
+    // ---------------------
 
     private void MostrarNumeroSorte(int numero)
     {
@@ -356,6 +378,11 @@ public class CadastroUI : MonoBehaviour
         inputTelefone.interactable = true;
         btnCadastrar.interactable = false;
 
+        //  RESET DO CHECKMARK
+        marcado = false;
+        imagemCheck.gameObject.SetActive(false);
+        //  ---------------------
+
         if (inputNome.image != null)
             inputNome.image.color = Color.white;
 
@@ -376,7 +403,7 @@ public class CadastroUI : MonoBehaviour
         return player != null ? player.luckyNumber : -1;
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         if (btnCadastrar != null)
             btnCadastrar.onClick.RemoveListener(OnCadastrar);
@@ -389,5 +416,9 @@ public class CadastroUI : MonoBehaviour
 
         if (inputTelefone != null)
             inputTelefone.onValueChanged.RemoveListener(ValidarCampos);
+
+        //  remover listener do quadrado
+        if (imagemQuadrado != null)
+            imagemQuadrado.GetComponent<Button>().onClick.RemoveListener(ToggleCheck);
     }
 }

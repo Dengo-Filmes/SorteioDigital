@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3d774f823acb2c44289b6772408ffb80
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.5
+  assetPath: Assets/viperOSK/Examples/Scripts/Example6_B_Gamepad.cs
+  uploadId: 711664

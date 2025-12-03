@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6956648c11f12d644b9fd87fd1f93142
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.5
+  assetPath: Assets/viperOSK/OSK/Resources/viperOSK_CommonAccentMap.asset
+  uploadId: 711664

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fcc4b44ea0097d240a980936fa8a082b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.5
+  assetPath: Assets/viperOSK/OSK/Scripts/OSK_LanguagePackage.cs
+  uploadId: 711664

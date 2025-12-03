@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 364ebb4c6440fc14bbee4350290cc223
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.5
+  assetPath: Assets/viperOSK/OSK/Scripts/viperTools/Unity2019HelperClasses.cs
+  uploadId: 711664

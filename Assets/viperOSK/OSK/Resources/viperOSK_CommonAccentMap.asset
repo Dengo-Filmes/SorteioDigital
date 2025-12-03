@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c6492f617602a43bfa3bd14d703deb, type: 3}
+  m_Name: viperOSK_CommonAccentMap
+  m_EditorClassIdentifier: 
+  entries:
+  - baseCharacter: a
+    accentedCharacters:
+    - "\xE1"
+    - "\xE0"
+    - "\xE2"
+    - "\xE4"
+    - "\xE3"
+    - "\xE5"
+    - "\u0101"
+    - "\u0103"
+    - "\u0105"
+    - "\u01CE"
+    - "\xE6"
+  - baseCharacter: b
+    accentedCharacters:
+    - "\u0180"
+    - "\u0253"
+  - baseCharacter: c
+    accentedCharacters:
+    - "\xE7"
+    - "\u0107"
+    - "\u010D"
+    - "\u0109"
+    - "\u010B"
+  - baseCharacter: d
+    accentedCharacters:
+    - "\u010F"
+    - "\u0111"
+    - "\xF0"
+  - baseCharacter: e
+    accentedCharacters:
+    - "\xE9"
+    - "\xE8"
+    - "\xEA"
+    - "\xEB"
+    - "\u0113"
+    - "\u0115"
+    - "\u0117"
+    - "\u0119"
+    - "\u011B"
+  - baseCharacter: f
+    accentedCharacters:
+    - "\u0192"
+  - baseCharacter: g
+    accentedCharacters:
+    - "\u011F"
+    - "\u0123"
+    - "\u011D"
+    - "\u0121"
+    - "\u01E7"
+  - baseCharacter: h
+    accentedCharacters:
+    - "\u0125"
+    - "\u0127"
+  - baseCharacter: i
+    accentedCharacters:
+    - "\xED"
+    - "\xEC"
+    - "\xEE"
+    - "\xEF"
+    - "\u0129"
+    - "\u012B"
+    - "\u012D"
+    - "\u012F"
+    - "\u0131"
+    - "\u01D0"
+  - baseCharacter: j
+    accentedCharacters:
+    - "\u0135"
+  - baseCharacter: k
+    accentedCharacters:
+    - "\u0137"
+  - baseCharacter: l
+    accentedCharacters:
+    - "\u013A"
+    - "\u013E"
+    - "\u013C"
+    - "\u0142"
+  - baseCharacter: m
+    accentedCharacters:
+    - "\u1E41"
+  - baseCharacter: n
+    accentedCharacters:
+    - "\xF1"
+    - "\u0144"
+    - "\u0148"
+    - "\u0146"
+    - "\u014B"
+    - "\u1E45"
+  - baseCharacter: o
+    accentedCharacters:
+    - "\xF3"
+    - "\xF2"
+    - "\xF4"
+    - "\xF6"
+    - "\xF5"
+    - "\u014D"
+    - "\u014F"
+    - "\u0151"
+    - "\u0153"
+    - "\xF8"
+    - "\u01D2"
+  - baseCharacter: p
+    accentedCharacters:
+    - "\u1E55"
+  - baseCharacter: q
+    accentedCharacters:
+    - "\u024B"
+  - baseCharacter: r
+    accentedCharacters:
+    - "\u0155"
+    - "\u0159"
+    - "\u0157"
+  - baseCharacter: s
+    accentedCharacters:
+    - "\u015B"
+    - "\u0161"
+    - "\u015F"
+    - "\u015D"
+    - "\u0219"
+    - "\xDF"
+  - baseCharacter: t
+    accentedCharacters:
+    - "\u0165"
+    - "\u0163"
+    - "\u021B"
+    - "\u0167"
+  - baseCharacter: u
+    accentedCharacters:
+    - "\xFA"
+    - "\xF9"
+    - "\xFB"
+    - "\xFC"
+    - "\u0169"
+    - "\u016B"
+    - "\u016D"
+    - "\u016F"
+    - "\u0171"
+    - "\u0173"
+    - "\u01D4"
+  - baseCharacter: v
+    accentedCharacters:
+    - "\u1E7D"
+    - "\u028B"
+  - baseCharacter: w
+    accentedCharacters:
+    - "\u0175"
+  - baseCharacter: x
+    accentedCharacters:
+    - "\u1E8B"
+    - "\u1E8D"
+  - baseCharacter: y
+    accentedCharacters:
+    - "\xFD"
+    - "\xFF"
+    - "\u0177"
+  - baseCharacter: z
+    accentedCharacters:
+    - "\u017A"
+    - "\u017E"
+    - "\u017C"
+    - "\u1E91"

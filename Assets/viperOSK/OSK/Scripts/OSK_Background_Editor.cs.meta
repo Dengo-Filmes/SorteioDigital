@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8dc56d11ed561f04abf3abbb24ca61eb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.5
+  assetPath: Assets/viperOSK/OSK/Scripts/OSK_Background_Editor.cs
+  uploadId: 711664

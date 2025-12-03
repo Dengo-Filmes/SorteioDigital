@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 00862b1cf8ed6aa4bb4f303ab97d5dc9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.5
+  assetPath: Assets/viperOSK/OSK/Editor/OSK_AccentWindow_Editor.cs
+  uploadId: 711664

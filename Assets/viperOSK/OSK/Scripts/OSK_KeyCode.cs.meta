@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3263c6526d2749e4ca844c664319c7ba
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.5
+  assetPath: Assets/viperOSK/OSK/Scripts/OSK_KeyCode.cs
+  uploadId: 711664

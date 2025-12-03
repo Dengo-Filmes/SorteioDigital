@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9ef71cc5efe9c5e4099e4f35bbc4dcb6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238231
+  packageName: viper OSK On-Screen Keyboard
+  packageVersion: 3.5
+  assetPath: Assets/viperOSK/OSK/Prefabs/UIKey.prefab
+  uploadId: 711664

@@ -24,7 +24,7 @@ public class SorteioLoader : MonoBehaviour
 #endif
     }
 
-    private void LoadAllPlayers()
+    public void LoadAllPlayers()
     {
         allPlayers.Clear();
 
@@ -43,6 +43,12 @@ public class SorteioLoader : MonoBehaviour
         }
 
         Debug.Log($"[SORTEIO] Jogadores carregados: {allPlayers.Count}");
+    }
+
+    // NOVO — AGORA o CadastroUI pode FORÇAR o reload na hora!
+    public void ReloadPlayers()
+    {
+        LoadAllPlayers();
     }
 
     public PlayerData GetRandomPlayer()

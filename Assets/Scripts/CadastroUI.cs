@@ -215,12 +215,25 @@ public class CadastroUI : MonoBehaviour
             File.WriteAllText(filePath, jsonData);
 
             SalvarNoArquivoConsolidado(jogador);
+
+            // NOVO — recarregar automaticamente o sorteio!
+            SorteioLoader loader = FindObjectOfType<SorteioLoader>();
+            if (loader != null)
+            {
+                loader.ReloadPlayers();
+                Debug.Log(" Loader atualizado imediatamente após cadastro!");
+            }
+            else
+            {
+                Debug.LogWarning("SorteioLoader não encontrado na cena!");
+            }
         }
         catch (Exception ex)
         {
             Debug.LogError($"Erro ao salvar jogador: {ex.Message}");
         }
     }
+
 
     private void SalvarNoArquivoConsolidado(PlayerData jogador)
     {

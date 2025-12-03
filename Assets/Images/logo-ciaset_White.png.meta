@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: ba8f654f7b55cf040af17ae9813b9e5b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4728481341612890785
+    second: logo-ciaset_White_0
+  - first:
+      213: 617993431606514170
+    second: logo-ciaset_White_1
+  - first:
+      213: -4538584477447884946
+    second: logo-ciaset_White_2
+  - first:
+      213: -1502913107099569858
+    second: logo-ciaset_White_3
+  - first:
+      213: -6569699519500526030
+    second: logo-ciaset_White_4
+  - first:
+      213: 6343617503262208855
+    second: logo-ciaset_White_5
+  - first:
+      213: -3630388953920104742
+    second: logo-ciaset_White_6
+  - first:
+      213: -4107342953777133130
+    second: logo-ciaset_White_7
+  - first:
+      213: 845318760952584938
+    second: logo-ciaset_White_8
+  - first:
+      213: 6741988443660220729
+    second: logo-ciaset_White_9
+  - first:
+      213: 5873906049385995939
+    second: logo-ciaset_White_10
+  - first:
+      213: -2116907403127969884
+    second: logo-ciaset_White_11
+  - first:
+      213: 8982054910122293319
+    second: logo-ciaset_White_12
+  - first:
+      213: -6469136640393457459
+    second: logo-ciaset_White_13
+  - first:
+      213: 8268724629358568440
+    second: logo-ciaset_White_14
+  - first:
+      213: 3295411277019082490
+    second: logo-ciaset_White_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: logo-ciaset_White_0
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 249
+        width: 222
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa16e54ab0fe9140800000000000000
+      internalID: 4728481341612890785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 446
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af15e6470cd839800800000000000000
+      internalID: 617993431606514170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_2
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 249
+        width: 188
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fed96d675b301c0800000000000000
+      internalID: -4538584477447884946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_3
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 253
+        width: 97
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e313d0bed74942be0800000000000000
+      internalID: -1502913107099569858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 254
+        width: 67
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23edd13481db3d4a0800000000000000
+      internalID: -6569699519500526030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_5
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 248
+        width: 156
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753f4e0628e090850800000000000000
+      internalID: 6343617503262208855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_6
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 249
+        width: 150
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad617152b744e9dc0800000000000000
+      internalID: -3630388953920104742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_7
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 269
+        width: 72
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9096d5859cff6c0800000000000000
+      internalID: -4107342953777133130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_8
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 308
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea5d843fec2bbb00800000000000000
+      internalID: 845318760952584938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_9
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 238
+        width: 218
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939f728d4ca509d50800000000000000
+      internalID: 6741988443660220729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 217
+        width: 136
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae9bad3e6e448150800000000000000
+      internalID: 5873906049385995939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_11
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 267
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7a926ceeb3f92e0800000000000000
+      internalID: -2116907403127969884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_12
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 23
+        width: 1328
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74874ee0a5ba6ac70800000000000000
+      internalID: 8982054910122293319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_13
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 235
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc052e120820936a0800000000000000
+      internalID: -6469136640393457459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_14
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 230
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3e076ad3960c270800000000000000
+      internalID: 8268724629358568440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-ciaset_White_15
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 198
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afee98bb817abbd20800000000000000
+      internalID: 3295411277019082490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      logo-ciaset_White_0: 4728481341612890785
+      logo-ciaset_White_1: 617993431606514170
+      logo-ciaset_White_10: 5873906049385995939
+      logo-ciaset_White_11: -2116907403127969884
+      logo-ciaset_White_12: 8982054910122293319
+      logo-ciaset_White_13: -6469136640393457459
+      logo-ciaset_White_14: 8268724629358568440
+      logo-ciaset_White_15: 3295411277019082490
+      logo-ciaset_White_2: -4538584477447884946
+      logo-ciaset_White_3: -1502913107099569858
+      logo-ciaset_White_4: -6569699519500526030
+      logo-ciaset_White_5: 6343617503262208855
+      logo-ciaset_White_6: -3630388953920104742
+      logo-ciaset_White_7: -4107342953777133130
+      logo-ciaset_White_8: 845318760952584938
+      logo-ciaset_White_9: 6741988443660220729
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

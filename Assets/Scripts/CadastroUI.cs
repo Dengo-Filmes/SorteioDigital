@@ -42,7 +42,6 @@ public class CadastroUI : MonoBehaviour
     private string dataFolderPath;
     private bool cadastrando = false;
 
-    // NOVO: evita formatar enquanto reseta o input
     private bool podeFormatarTelefone = true;
 
     private void Start()

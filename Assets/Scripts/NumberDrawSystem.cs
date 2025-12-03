@@ -6,18 +6,13 @@ using TMPro;
 
 public class NumberDrawSystem : MonoBehaviour
 {
-    [Header("Cadastro Reference")]
-    [SerializeField] private CadastroUI cadastroUI; 
+    [Header("Loader de Jogadores")]
+    [SerializeField] private SorteioLoader loader;
+
     [Header("UI References")]
     [SerializeField] private TMP_Text numberDisplayText;
-    [SerializeField] private TMP_Text winnerNameText; 
+    [SerializeField] private TMP_Text winnerNameText;
     [SerializeField] private Button drawButton;
-
-    [Header("Animation Settings")]
-    [SerializeField] private float initialSpeed = 0.05f;
-    [SerializeField] private float finalSpeed = 0.5f;
-    [SerializeField] private float animationDuration = 3f;
-    [SerializeField] private float slowDownStartTime = 2f;
 
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
@@ -28,69 +23,42 @@ public class NumberDrawSystem : MonoBehaviour
     private int finalNumber;
     private Coroutine drawCoroutine;
 
-    private List<PlayerData> jogadores = new List<PlayerData>();
-
-
     void Start()
     {
         if (drawButton != null)
             drawButton.onClick.AddListener(StartDraw);
 
-        if (numberDisplayText != null)
-            numberDisplayText.text = "000";
-
-        if (winnerNameText != null)
-            winnerNameText.text = "";
-
-        CarregarJogadoresDoCadastro();
+        numberDisplayText.text = "000";
+        winnerNameText.text = "";
     }
-
-    private void CarregarJogadoresDoCadastro()
-    {
-        if (cadastroUI == null)
-        {
-            Debug.LogError(" cadastroUI não atribuído no inspector!");
-            return;
-        }
-
-        jogadores = cadastroUI.GetRegisteredPlayers();
-
-        Debug.Log($" Sorteio carregou {jogadores.Count} jogadores válidos.");
-    }
-
 
     public void StartDraw()
     {
         if (isDrawing) return;
 
-        CarregarJogadoresDoCadastro();
-
-        if (jogadores.Count == 0)
+        if (loader.allPlayers.Count == 0)
         {
-            Debug.LogWarning(" Nenhum jogador cadastrado para sortear!");
+            Debug.LogWarning("Nenhum jogador encontrado no SorteioLoader!");
             return;
         }
 
-        int index = Random.Range(0, jogadores.Count);
-        finalNumber = jogadores[index].luckyNumber;
+        PlayerData p = loader.GetRandomPlayer();
+        finalNumber = p.luckyNumber;
 
-        Debug.Log($" Número sorteado REAL: {finalNumber:000}");
+        Debug.Log($"Número sorteado REAL: {finalNumber:000}");
 
         if (drawCoroutine != null)
             StopCoroutine(drawCoroutine);
 
-        drawCoroutine = StartCoroutine(DrawAnimation());
+        drawCoroutine = StartCoroutine(DrawAnimation(p));
     }
 
-
-    private IEnumerator DrawAnimation()
+    private IEnumerator DrawAnimation(PlayerData winner)
     {
         isDrawing = true;
-        if (drawButton != null)
-            drawButton.interactable = false;
+        drawButton.interactable = false;
 
-        float elapsedTime = 0f;
-
+        // Som rolando
         if (audioSource != null && rollingSound != null)
         {
             audioSource.clip = rollingSound;
@@ -98,29 +66,53 @@ public class NumberDrawSystem : MonoBehaviour
             audioSource.Play();
         }
 
-        while (elapsedTime < animationDuration)
+        // =====================================================================
+        // 1) FASE RÁPIDA — 4 segundos, velocidade perceptível (1 - 999)
+        // =====================================================================
+        float fastDuration = 4f;
+        float fastElapsed = 0f;
+
+        while (fastElapsed < fastDuration)
         {
-            float progress = elapsedTime / animationDuration;
+            float t = fastElapsed / fastDuration;
 
-            float currentSpeed = elapsedTime < slowDownStartTime ?
-                initialSpeed :
-                Mathf.Lerp(initialSpeed, finalSpeed, (elapsedTime - slowDownStartTime) / (animationDuration - slowDownStartTime));
+            // Velocidade ajustada para ficar perceptível (entre 8 ms - 20 ms)
+            float speed = Mathf.Lerp(0.008f, 0.020f, Mathf.Pow(t, 1.7f));
 
-            int currentNumber = Random.Range(0, 1000);
+            int n = Random.Range(1, 1000);
+            numberDisplayText.text = n.ToString("000");
 
-            if (elapsedTime > animationDuration - 0.5f)
-            {
-                float t = (elapsedTime - (animationDuration - 0.5f)) / 0.5f;
-                currentNumber = (int)Mathf.Lerp(currentNumber, finalNumber, t);
-            }
-
-            if (numberDisplayText != null)
-                numberDisplayText.text = currentNumber.ToString("000");
-
-            yield return new WaitForSeconds(currentSpeed);
-            elapsedTime += currentSpeed;
+            fastElapsed += speed;
+            yield return new WaitForSeconds(speed);
         }
 
+        // =====================================================================
+        // 2) FASE LENTA / SUSPENSE — 6 segundos com desaceleração exponencial
+        // =====================================================================
+        float slowDuration = 6f;
+        float slowElapsed = 0f;
+
+        while (slowElapsed < slowDuration)
+        {
+            float t = slowElapsed / slowDuration;
+
+            // Atrasos crescentes (suspense): 20 ms - 180 ms
+            float speed = Mathf.Lerp(0.020f, 0.180f, Mathf.Pow(t, 2.3f));
+
+            // Número aleatório caminhando exponencialmente até o final
+            int n = Random.Range(1, 1000);
+            float blend = Mathf.Pow(t, 3f); // aproximação final suave
+            n = (int)Mathf.Lerp(n, finalNumber, blend);
+
+            numberDisplayText.text = n.ToString("000");
+
+            slowElapsed += speed;
+            yield return new WaitForSeconds(speed);
+        }
+
+        // =====================================================================
+        // NÚMERO FINAL
+        // =====================================================================
         numberDisplayText.text = finalNumber.ToString("000");
 
         if (audioSource != null)
@@ -130,26 +122,15 @@ public class NumberDrawSystem : MonoBehaviour
                 audioSource.PlayOneShot(finishSound);
         }
 
-        MostrarNomeDoGanhador(finalNumber);
+        // =====================================================================
+        // MOSTRAR GANHADOR
+        // =====================================================================
+        winnerNameText.text =
+            $"GANHADOR:\n{winner.playerName}\nNÚMERO: {winner.luckyNumber:000}";
 
         isDrawing = false;
         drawButton.interactable = true;
     }
-
-
-    private void MostrarNomeDoGanhador(int numero)
-    {
-        if (winnerNameText == null) return;
-
-        var ganhador = jogadores.Find(p => p.luckyNumber == numero);
-
-        if (ganhador != null)
-            winnerNameText.text = $"GANHADOR:\n{ganhador.playerName}\nNÚMERO: {ganhador.luckyNumber:000}";
-        else
-            winnerNameText.text = "Ninguém encontrado?";
-
-    }
-
 
     void OnDestroy()
     {
